@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prod-config
+data:
+  DB_NAME: mydatabase
+  DB_USER: myuser
+  DB_HOST: myuser
+  DB_PORT: "5432"
+  POSTGRES_DB: mydatabase
+  POSTGRES_USER: myuser
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: prod-secret
+type: Opaque
+data:
+  DB_PASSWORD: bXlwYXNzd29yZA==
